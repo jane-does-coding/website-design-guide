@@ -27,7 +27,24 @@ export default function RootLayout({
 			lang="en"
 			className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
 		>
-			<body className="min-h-full flex flex-col bg-amber-50">{children}</body>
+			<body className="min-h-full flex flex-col bg-amber-50">
+				{/* corners */}
+				<p className="text-[3vh] absolute top-[2vh] left-[2vw] hand-coffe">
+					2026
+				</p>
+
+				<a
+					href="/all-nav"
+					className="text-[3vh] absolute top-[2vh] right-[2vw] hand-coffe"
+				>
+					All Nav
+				</a>
+
+				<p className="text-[3vh] absolute bottom-[2vh] right-[2vw] hand-coffe">
+					by Jane
+				</p>
+				{children}
+			</body>
 		</html>
 	);
 }

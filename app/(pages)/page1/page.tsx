@@ -153,7 +153,7 @@ export default function Page1() {
 						</motion.h1>
 						<a
 							href="/colors"
-							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer ml-auto"
+							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white ml-auto"
 						>
 							{"->"}
 						</a>
@@ -164,7 +164,7 @@ export default function Page1() {
 					<motion.button
 						variants={line}
 						onClick={() => setStep((s) => s + 1)}
-						className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer mt-[3vh] ml-auto"
+						className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white mt-[3vh] ml-auto"
 					>
 						{"->"}
 					</motion.button>

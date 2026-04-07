@@ -62,35 +62,6 @@ function AnimatedText({ text }: { text: string }) {
 export default function Home() {
 	return (
 		<div className="h-screen w-screen flex flex-col items-center justify-center relative">
-			{/* corners */}
-			<motion.p
-				variants={corners}
-				initial="hidden"
-				animate="show"
-				className="text-[3vh] absolute top-[2vh] left-[2vw] hand-coffe"
-			>
-				2026
-			</motion.p>
-
-			<motion.a
-				variants={corners}
-				initial="hidden"
-				animate="show"
-				href="/all-nav"
-				className="text-[3vh] absolute top-[2vh] right-[2vw] hand-coffe"
-			>
-				All Nav
-			</motion.a>
-
-			<motion.p
-				variants={corners}
-				initial="hidden"
-				animate="show"
-				className="text-[3vh] absolute bottom-[2vh] right-[2vw] hand-coffe"
-			>
-				by Jane
-			</motion.p>
-
 			{/* main content */}
 			<motion.div
 				className="flex flex-col text-right"
@@ -125,7 +96,7 @@ export default function Home() {
 				<motion.a
 					href="/page1"
 					variants={item}
-					className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer mt-[1vh] ml-auto"
+					className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer mt-[1vh] ml-auto bg-white"
 				>
 					Start
 				</motion.a>
