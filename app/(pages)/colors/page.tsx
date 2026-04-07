@@ -33,6 +33,8 @@ const word = {
 	show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
 };
 
+const TOTAL_STEPS = 6;
+
 function AnimatedText({ children }: { children: string }) {
 	return (
 		<motion.span variants={wordContainer}>
@@ -263,15 +265,131 @@ export default function Colors() {
 					</div>
 				)}
 
-				{step < 5 && (
-					<motion.button
-						variants={line}
-						onClick={() => setStep((s) => s + 1)}
-						className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer mt-[5vh] ml-auto"
-					>
-						{"->"}
-					</motion.button>
+				{/* PAGE 5 */}
+				{step === 4 && (
+					<div className="w-[45vw] relative">
+						<motion.h1
+							variants={line}
+							className="hand-coffe text-[5vh] translate-y-[5vh]"
+						>
+							<AnimatedText>Try it?</AnimatedText>
+						</motion.h1>
+
+						<p className="absolute top-[12vh] left-[3vw] text0black hand-coffe text-[3vh]">
+							Purple here {"->"}
+						</p>
+						<p className="absolute top-[27vh] right-[3vw] text0black hand-coffe text-[3vh]">
+							{"<-"}Yellow here
+						</p>
+						<div className="w-[20vw] overflow-hidden rounded-full border border-dashed mx-auto relative">
+							<img
+								src="/imgs/color-wheel.png"
+								className="w-full rounded-full object-cover scale-130"
+								alt=""
+							/>
+						</div>
+						<p className="hand-coffe ml-[2vw] text-[3vh] text-left mt-[3vh]">
+							Purple and Yellow are opposites
+						</p>
+						<p className="hand-coffe mr-[6vw] text-[3vh] text-right">
+							Then we add light and dark neutrals
+						</p>
+						<div className="grid grid-cols-2 gap-[4vw] mt-[3vh]">
+							<div className="w-full flex flex-col gap-[0.5vh] h-[17vh]">
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-[#662C91]"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-yellow-400"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-[#F3FFC6]"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-neutral-800"></div>
+							</div>
+							<div className="w-full flex flex-col gap-[0.5vh] h-[20vh] items-center justify-start">
+								<p className="text-right text-[2.5vh] hand-coffe w-[70%]">
+									Kinda gives Halloween vibes, but you get the main idea
+								</p>
+							</div>
+						</div>
+					</div>
 				)}
+
+				{/* PAGE 6 */}
+				{step === 5 && (
+					<div className="w-[45vw] relative">
+						<motion.h1
+							variants={line}
+							className="hand-coffe text-[5vh] translate-y-[0vh]"
+						>
+							<AnimatedText>What do you need?</AnimatedText>
+						</motion.h1>
+
+						<p className="hand-coffe ml-[2vw] text-[3vh] text-left mt-[3vh]">
+							What is it that's needed to call the pallete full?
+						</p>
+
+						<div className="grid grid-cols-2 gap-[4vw] mt-[3vh]">
+							<div className="w-full flex flex-col gap-[0.5vh] h-[25vh]">
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed flex items-center justify-center">
+									<p className="text-[2.5vh] hand-coffe">Main Color</p>
+								</div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed flex items-center justify-center">
+									<p className="text-[2.5vh] hand-coffe">Secondary Color</p>
+								</div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed flex items-center justify-center">
+									<p className="text-[2.5vh] hand-coffe">Light Neutral</p>
+								</div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed flex items-center justify-center">
+									<p className="text-[2.5vh] hand-coffe">Dark Neutral</p>
+								</div>
+							</div>
+							<div className="w-full flex flex-col gap-[0.5vh] h-[25vh] items-start justify-evenly">
+								<p className="text-[2.5vh] hand-coffe">- Primary</p>
+								<p className="text-[2.5vh] hand-coffe">- Accent & Details</p>
+								<p className="text-[2.5vh] hand-coffe">- Background</p>
+								<p className="text-[2.5vh] hand-coffe">
+									- Text, Borders, Details
+								</p>
+							</div>
+						</div>
+					</div>
+				)}
+
+				<div className="flex items-center justify-between w-full mt-[5vh]">
+					{/* BACK */}
+					{step > 0 ? (
+						<motion.button
+							variants={line}
+							onClick={() => setStep((s) => Math.max(0, s - 1))}
+							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
+						>
+							{"<-"}
+						</motion.button>
+					) : (
+						<div />
+					)}
+
+					{/* NEXT */}
+					{step < TOTAL_STEPS - 1 && (
+						<motion.button
+							variants={line}
+							onClick={() => setStep((s) => s + 1)}
+							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
+						>
+							{"->"}
+						</motion.button>
+					)}
+				</div>
+
+				<motion.div
+					variants={line}
+					className="flex gap-[1vw] justify-center mt-[3vh]"
+				>
+					{Array.from({ length: TOTAL_STEPS }).map((_, i) => (
+						<button
+							key={i}
+							onClick={() => setStep(i)}
+							className={`w-[1.2vh] h-[1.2vh] rounded-full border border-dashed transition-all translate-y-[-6vh]
+			${step === i ? "bg-neutral-800 scale-125" : "bg-transparent"}`}
+						/>
+					))}
+				</motion.div>
 			</motion.div>
 		</div>
 	);
