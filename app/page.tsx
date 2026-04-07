@@ -1,65 +1,135 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
+
+const mainContainer = {
+	hidden: {},
+	show: {
+		transition: {
+			staggerChildren: 0.3,
+		},
+	},
+};
+
+const item = {
+	hidden: { opacity: 0, y: 30 },
+	show: {
+		opacity: 1,
+		y: 0,
+		transition: { duration: 0.8 },
+	},
+};
+
+const corners = {
+	hidden: { opacity: 0 },
+	show: {
+		opacity: 1,
+		transition: {
+			delay: 1.2,
+			duration: 0.6,
+		},
+	},
+};
+
+const wordContainer = {
+	hidden: {},
+	show: {
+		transition: { staggerChildren: 0.06 },
+	},
+};
+
+const word = {
+	hidden: { opacity: 0, y: 15 },
+	show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+};
+
+function AnimatedText({ text }: { text: string }) {
+	return (
+		<motion.span variants={wordContainer}>
+			{text.split(" ").map((w, i) => (
+				<motion.span
+					key={i}
+					variants={word}
+					className="inline-block mr-[0.5vw]"
+				>
+					{w}
+				</motion.span>
+			))}
+		</motion.span>
+	);
+}
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+	return (
+		<div className="h-screen w-screen flex flex-col items-center justify-center relative">
+			{/* corners */}
+			<motion.p
+				variants={corners}
+				initial="hidden"
+				animate="show"
+				className="text-[3vh] absolute top-[2vh] left-[2vw] hand-coffe"
+			>
+				2026
+			</motion.p>
+
+			<motion.a
+				variants={corners}
+				initial="hidden"
+				animate="show"
+				href="/all-nav"
+				className="text-[3vh] absolute top-[2vh] right-[2vw] hand-coffe"
+			>
+				All Nav
+			</motion.a>
+
+			<motion.p
+				variants={corners}
+				initial="hidden"
+				animate="show"
+				className="text-[3vh] absolute bottom-[2vh] right-[2vw] hand-coffe"
+			>
+				by Jane
+			</motion.p>
+
+			{/* main content */}
+			<motion.div
+				className="flex flex-col text-right"
+				variants={mainContainer}
+				initial="hidden"
+				animate="show"
+			>
+				<motion.h1
+					variants={item}
+					className="hand-coffe text-[5vh] font-extralight"
+				>
+					<AnimatedText text="Want to make a" />{" "}
+					<span className="border-b-2 border-dashed italic">
+						<AnimatedText text="website?" />
+					</span>
+				</motion.h1>
+
+				<motion.h1
+					variants={item}
+					className="hand-coffe text-[5vh] font-extralight border-b-2 border-dashed w-fit ml-auto italic"
+				>
+					<AnimatedText text="a pretty website?" />
+				</motion.h1>
+
+				<motion.h1
+					variants={item}
+					className="hand-coffe text-[5vh] font-extralight mr-[15vw] mt-[4vh]"
+				>
+					<AnimatedText text="I will guide you!" />
+				</motion.h1>
+
+				<motion.a
+					href="/page1"
+					variants={item}
+					className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer mt-[1vh] ml-auto"
+				>
+					Start
+				</motion.a>
+			</motion.div>
+		</div>
+	);
 }
