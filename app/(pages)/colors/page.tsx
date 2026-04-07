@@ -375,6 +375,17 @@ export default function Colors() {
 							{"->"}
 						</motion.button>
 					)}
+
+					{/* NEXT PAGE */}
+					{step == TOTAL_STEPS - 1 && (
+						<motion.a
+							variants={line}
+							href="/page2"
+							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
+						>
+							{"->"}
+						</motion.a>
+					)}
 				</div>
 
 				<motion.div

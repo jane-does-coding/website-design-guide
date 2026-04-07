@@ -27,7 +27,7 @@ const item = {
 const Page = () => {
 	return (
 		<motion.div
-			className="w-screen h-screen grid grid-cols-4 gap-[2vh] p-[2vh]"
+			className="w-screen h-screen grid grid-cols-4 gap-[2vh] py-[10vh] px-[5vw]"
 			variants={container}
 			initial="hidden"
 			animate="show"
