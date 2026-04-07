@@ -85,34 +85,34 @@ export default function Colors() {
 								<p className="hand-coffe text-[3vh] text-center">
 									Same color, different shades
 								</p>
-								<div className="h-full w-full rounded-[0.5vh] bg-amber-200"></div>
-								<div className="h-full w-full rounded-[0.5vh] bg-amber-400"></div>
-								<div className="h-full w-full rounded-[0.5vh] bg-amber-800"></div>
-								<div className="h-full w-full rounded-[0.5vh] bg-amber-950"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-200"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-400"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-800"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-950"></div>
 							</div>
 							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
 								<p className="hand-coffe text-[3vh] text-center">60-30-10</p>
-								<div className="h-full w-full rounded-[0.5vh] bg-amber-200"></div>
-								<div className="h-full w-full rounded-[0.5vh] bg-amber-950/70"></div>
-								<div className="h-full w-full rounded-[0.5vh] bg-indigo-500"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-200"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-950/70"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-indigo-500"></div>
 							</div>
 							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
 								<p className="hand-coffe text-[3vh] text-center">
 									4 contrasting colors
 								</p>
-								<div className="h-full w-full rounded-[0.5vh] bg-red-500"></div>
-								<div className="h-full w-full rounded-[0.5vh] bg-yellow-300"></div>
-								<div className="h-full w-full rounded-[0.5vh] bg-green-400"></div>
-								<div className="h-full w-full rounded-[0.5vh] bg-blue-500"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-red-500"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-yellow-300"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-green-400"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-blue-500"></div>
 							</div>
 							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
 								<p className="hand-coffe text-[3vh] text-center">
 									Black & White
 								</p>
-								<div className="h-full w-full rounded-[0.5vh] bg-neutral-300"></div>
-								<div className="h-full w-full rounded-[0.5vh] bg-neutral-500"></div>
-								<div className="h-full w-full rounded-[0.5vh] bg-neutral-600"></div>
-								<div className="h-full w-full rounded-[0.5vh] bg-neutral-800"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-neutral-300"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-neutral-500"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-neutral-600"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-neutral-800"></div>
 							</div>
 						</div>
 					</>
@@ -122,42 +122,53 @@ export default function Colors() {
 				{step === 1 && (
 					<div className="w-[45vw]">
 						<motion.h1 variants={line} className="hand-coffe text-[5vh]">
-							<AnimatedText>Now we will make a design guide</AnimatedText>
+							<AnimatedText>What NOT to do</AnimatedText>
 						</motion.h1>
 
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[5vh] ml-auto"
+							className="hand-coffe text-[4vh] text-center ml-auto mt-[4vh]"
 						>
-							<AnimatedText>using which you can make a website!</AnimatedText>
+							<AnimatedText>No Absolutes</AnimatedText>
 						</motion.h1>
-
+						<div className="w-full flex gap-[0.5vw] mt-[1vh]">
+							<div className="h-[6vh] w-full border-dashed border-2 flex items-center justify-center rounded-[0.5vh] bg-black">
+								<p className="text-white hand-coffe text-[2.75vh] text-center">
+									no 100% black
+								</p>
+							</div>
+							<div className="h-[6vh] w-full border-dashed border-2 flex items-center justify-center rounded-[0.5vh] bg-white">
+								<p className="text-black hand-coffe text-[2.75vh] text-center">
+									no 100% black
+								</p>
+							</div>
+						</div>
+						<p className="text-center hand-coffe text-[2.5vh] mt-[2vh]">
+							Absolute colors, meaning 100% of one color are way sharp on the
+							eyes, and lowering them down smoothes the design
+						</p>
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[5vh] mt-[4vh] text-left"
+							className="hand-coffe text-[4vh] text-center ml-auto mt-[4vh]"
 						>
-							<AnimatedText>Follow along</AnimatedText>
+							<AnimatedText>No Mid-Colors</AnimatedText>
 						</motion.h1>
-
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[5vh] text-left"
-						>
-							<AnimatedText>To make soething awesome</AnimatedText>
-						</motion.h1>
-
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[5vh] text-right mb-[3vh]"
-						>
-							<AnimatedText>And build something fun.</AnimatedText>
-						</motion.h1>
-						<a
-							href="/colors"
-							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer ml-auto"
-						>
-							{"->"}
-						</a>
+						<div className="w-full flex gap-[0.5vw] mt-[1vh]">
+							<div className="h-[6vh] w-full border-dashed border-2 flex items-center justify-center rounded-[0.5vh] bg-neutral-400">
+								<p className="text-white hand-coffe text-[2.75vh] text-center">
+									Bad Contrast
+								</p>
+							</div>
+							<div className="h-[6vh] w-full border-dashed border-2 flex items-center justify-center rounded-[0.5vh] bg-neutral-400">
+								<p className="text-black hand-coffe text-[2.75vh] text-center">
+									Also Bad Contrast
+								</p>
+							</div>
+						</div>
+						<p className="text-center hand-coffe text-[2.5vh] mt-[2vh]">
+							Where are you gonna use this color? White or black text both look
+							meh on it, and it's hard to impliment it anywhere.
+						</p>
 					</div>
 				)}
 
@@ -165,7 +176,7 @@ export default function Colors() {
 					<motion.button
 						variants={line}
 						onClick={() => setStep((s) => s + 1)}
-						className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer mt-[3vh] ml-auto"
+						className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer mt-[5vh] ml-auto"
 					>
 						{"->"}
 					</motion.button>
