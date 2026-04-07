@@ -172,7 +172,49 @@ export default function Colors() {
 					</div>
 				)}
 
-				{step < 2 && (
+				{/* PAGE 3 */}
+				{step === 2 && (
+					<div className="w-[45vw]">
+						<motion.h1 variants={line} className="hand-coffe text-[5vh]">
+							<AnimatedText>What to do</AnimatedText>
+						</motion.h1>
+
+						<p className="hand-coffe text-[3vh] text-center mt-[2vh]">
+							Opposites on the Color Wheel + neutral
+						</p>
+						<div className="grid grid-cols-2 gap-[4vw] mt-[1vh]">
+							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-yellow-300"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-purple-400"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-slate-950/70"></div>
+							</div>
+							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-green-300"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-pink-300"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-950/70"></div>
+							</div>
+						</div>
+						<p className="hand-coffe text-[3vh] text-center mt-[3vh]">
+							Same Color, Different Shades
+						</p>
+						<div className="grid grid-cols-2 gap-[4vw] mt-[1vh]">
+							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-300"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-500"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-700"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-950"></div>
+							</div>
+							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-indigo-300"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-indigo-500"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-indigo-700"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-indigo-950"></div>
+							</div>
+						</div>
+					</div>
+				)}
+
+				{step < 3 && (
 					<motion.button
 						variants={line}
 						onClick={() => setStep((s) => s + 1)}
