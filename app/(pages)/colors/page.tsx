@@ -80,8 +80,8 @@ export default function Colors() {
 							</AnimatedText>
 						</motion.h1>
 
-						<div className="grid grid-cols-2 gap-[4vw] mt-[5vh]">
-							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
+						<div className="grid grid-cols-2 gap-[4vw] gap-y-[4vh] mt-[5vh]">
+							<div className="w-full flex flex-col gap-[0.5vh] h-[20vh]">
 								<p className="hand-coffe text-[3vh] text-center">
 									Same color, different shades
 								</p>
@@ -90,13 +90,16 @@ export default function Colors() {
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-800"></div>
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-950"></div>
 							</div>
-							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
-								<p className="hand-coffe text-[3vh] text-center">60-30-10</p>
-								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-200"></div>
-								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-950/70"></div>
+							<div className="w-full flex flex-col gap-[0.5vh] h-[20vh]">
+								<p className="hand-coffe text-[3vh] text-center">
+									2 Opposites, 2 Neutral
+								</p>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-yellow-300"></div>
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-indigo-500"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-50"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-950/70"></div>
 							</div>
-							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
+							<div className="w-full flex flex-col gap-[0.5vh] h-[20vh]">
 								<p className="hand-coffe text-[3vh] text-center">
 									4 contrasting colors
 								</p>
@@ -105,7 +108,7 @@ export default function Colors() {
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-green-400"></div>
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-blue-500"></div>
 							</div>
-							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
+							<div className="w-full flex flex-col gap-[0.5vh] h-[20vh]">
 								<p className="hand-coffe text-[3vh] text-center">
 									Black & White
 								</p>
@@ -180,31 +183,33 @@ export default function Colors() {
 						</motion.h1>
 
 						<p className="hand-coffe text-[3vh] text-center mt-[2vh]">
-							Opposites on the Color Wheel + neutral
+							Opposites on the Color Wheel + 2 Neutral
 						</p>
 						<div className="grid grid-cols-2 gap-[4vw] mt-[1vh]">
-							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
+							<div className="w-full flex flex-col gap-[0.5vh] h-[20vh]">
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-yellow-300"></div>
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-purple-400"></div>
-								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-slate-950/70"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-slate-100"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-slate-700"></div>
 							</div>
-							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
+							<div className="w-full flex flex-col gap-[0.5vh] h-[20vh]">
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-green-300"></div>
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-pink-300"></div>
-								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-950/70"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-50"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-950/80"></div>
 							</div>
 						</div>
 						<p className="hand-coffe text-[3vh] text-center mt-[3vh]">
 							Same Color, Different Shades
 						</p>
 						<div className="grid grid-cols-2 gap-[4vw] mt-[1vh]">
-							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
+							<div className="w-full flex flex-col gap-[0.5vh] h-[20vh]">
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-300"></div>
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-500"></div>
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-700"></div>
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-950"></div>
 							</div>
-							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
+							<div className="w-full flex flex-col gap-[0.5vh] h-[20vh]">
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-indigo-300"></div>
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-indigo-500"></div>
 								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-indigo-700"></div>
@@ -214,7 +219,51 @@ export default function Colors() {
 					</div>
 				)}
 
-				{step < 3 && (
+				{/* PAGE 4 */}
+				{step === 3 && (
+					<div className="w-[45vw]">
+						<motion.h1 variants={line} className="hand-coffe text-[5vh]">
+							<AnimatedText>What to do</AnimatedText>
+						</motion.h1>
+
+						<p className="hand-coffe text-[3vh] text-center mt-[2vh]">
+							4 Contrasting Colors
+						</p>
+						<div className="grid grid-cols-2 gap-[4vw] mt-[1vh]">
+							<div className="w-full flex flex-col gap-[0.5vh] h-[20vh]">
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-red-500"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-yellow-300"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-sky-400"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-green-400"></div>
+							</div>
+							<div className="w-full flex flex-col gap-[0.5vh] h-[20vh]">
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-indigo-400"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-purple-300"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-50"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-950/80"></div>
+							</div>
+						</div>
+						<p className="hand-coffe text-[3vh] text-center mt-[4vh]">
+							Buddies on the Color Wheel + 2 Neutrals
+						</p>
+						<div className="grid grid-cols-2 gap-[4vw] mt-[1vh]">
+							<div className="w-full flex flex-col gap-[0.5vh] h-[20vh]">
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-purple-400"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-blue-400"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-neutral-50"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-neutral-700"></div>
+							</div>
+							<div className="w-full flex flex-col gap-[0.5vh] h-[20vh]">
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-green-400"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-yellow-300"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-amber-50"></div>
+								<div className="h-full w-full rounded-[0.5vh] border-2 border-dashed bg-yellow-950"></div>
+							</div>
+						</div>
+					</div>
+				)}
+
+				{step < 5 && (
 					<motion.button
 						variants={line}
 						onClick={() => setStep((s) => s + 1)}
