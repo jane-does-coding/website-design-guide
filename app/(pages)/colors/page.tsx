@@ -49,7 +49,7 @@ function AnimatedText({ children }: { children: string }) {
 	);
 }
 
-export default function Page1() {
+export default function Colors() {
 	const [step, setStep] = useState(0);
 
 	return (
@@ -66,54 +66,55 @@ export default function Page1() {
 					<>
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[5vh] font-extralight"
+							className="hand-coffe text-[5vh] font-extralight text-center"
 						>
-							<AnimatedText>First things first...</AnimatedText>
+							<AnimatedText>Let's talk colors!</AnimatedText>
 						</motion.h1>
 
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[5vh] font-extralight italic ml-auto"
+							className="hand-coffe text-[4vh] mt-[0vh] font-extralight ml-auto"
 						>
 							<AnimatedText>
-								Throw away all you know about modern web dev
+								There are multiple ways to go about colors
 							</AnimatedText>
 						</motion.h1>
 
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[5vh] mr-[15vw] mt-[4vh] text-left"
-						>
-							<AnimatedText>You CAN have</AnimatedText>
-						</motion.h1>
-
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[5vh] mr-[15vw] text-left"
-						>
-							<AnimatedText>Custom Fonts</AnimatedText>
-						</motion.h1>
-
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[5vh] mr-[15vw] text-left"
-						>
-							<AnimatedText>Custom Sounds</AnimatedText>
-						</motion.h1>
-
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[5vh] mr-[15vw] text-left"
-						>
-							<AnimatedText>Custom Art</AnimatedText>
-						</motion.h1>
-
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[5vh] text-right"
-						>
-							<AnimatedText>Custom Everything!</AnimatedText>
-						</motion.h1>
+						<div className="grid grid-cols-2 gap-[4vw] mt-[5vh]">
+							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
+								<p className="hand-coffe text-[3vh] text-center">
+									Same color, different shades
+								</p>
+								<div className="h-full w-full rounded-[0.5vh] bg-amber-200"></div>
+								<div className="h-full w-full rounded-[0.5vh] bg-amber-400"></div>
+								<div className="h-full w-full rounded-[0.5vh] bg-amber-800"></div>
+								<div className="h-full w-full rounded-[0.5vh] bg-amber-950"></div>
+							</div>
+							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
+								<p className="hand-coffe text-[3vh] text-center">60-30-10</p>
+								<div className="h-full w-full rounded-[0.5vh] bg-amber-200"></div>
+								<div className="h-full w-full rounded-[0.5vh] bg-amber-950/70"></div>
+								<div className="h-full w-full rounded-[0.5vh] bg-indigo-500"></div>
+							</div>
+							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
+								<p className="hand-coffe text-[3vh] text-center">
+									4 contrasting colors
+								</p>
+								<div className="h-full w-full rounded-[0.5vh] bg-red-500"></div>
+								<div className="h-full w-full rounded-[0.5vh] bg-yellow-300"></div>
+								<div className="h-full w-full rounded-[0.5vh] bg-green-400"></div>
+								<div className="h-full w-full rounded-[0.5vh] bg-blue-500"></div>
+							</div>
+							<div className="w-full flex flex-col gap-[0.5vh] h-[17.5vh]">
+								<p className="hand-coffe text-[3vh] text-center">
+									Black & White
+								</p>
+								<div className="h-full w-full rounded-[0.5vh] bg-neutral-300"></div>
+								<div className="h-full w-full rounded-[0.5vh] bg-neutral-500"></div>
+								<div className="h-full w-full rounded-[0.5vh] bg-neutral-600"></div>
+								<div className="h-full w-full rounded-[0.5vh] bg-neutral-800"></div>
+							</div>
+						</div>
 					</>
 				)}
 
@@ -160,7 +161,7 @@ export default function Page1() {
 					</div>
 				)}
 
-				{step < 1 && (
+				{step < 2 && (
 					<motion.button
 						variants={line}
 						onClick={() => setStep((s) => s + 1)}
