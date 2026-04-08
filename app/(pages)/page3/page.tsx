@@ -177,30 +177,45 @@ export default function Page1() {
 				{/* PAGE 2 */}
 				{step === 1 && (
 					<div className="w-[45vw]">
-						<motion.h1 variants={line} className="hand-coffe text-[5vh]">
-							<AnimatedText>
-								You can treat the design guide like a framework for making a
-								website
-							</AnimatedText>
-						</motion.h1>
-
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[5vh] mt-[4vh] text-left"
+							className="hand-coffe text-center text-[5vh]"
 						>
-							<AnimatedText>The right guide</AnimatedText>
+							<AnimatedText>Now in our guide we already have:</AnimatedText>
 						</motion.h1>
 
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[5vh] text-left"
-						>
-							<AnimatedText>is half of the job</AnimatedText>
-						</motion.h1>
+						<div className="grid grid-cols-2 mt-[3vh]">
+							<motion.h1
+								variants={line}
+								className="hand-coffe text-[5vh] text-left"
+							>
+								<AnimatedText>Colors</AnimatedText>
+							</motion.h1>
 
+							<motion.h1
+								variants={line}
+								className="hand-coffe text-[5vh] text-left"
+							>
+								<AnimatedText>Sizes</AnimatedText>
+							</motion.h1>
+
+							<motion.h1
+								variants={line}
+								className="hand-coffe text-[5vh] text-left"
+							>
+								<AnimatedText>Fonts</AnimatedText>
+							</motion.h1>
+
+							<motion.h1
+								variants={line}
+								className="hand-coffe text-[5vh] text-left"
+							>
+								<AnimatedText>Flow</AnimatedText>
+							</motion.h1>
+						</div>
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[5vh] text-right mb-[3vh]"
+							className="hand-coffe text-[5vh] text-right mb-[3vh] mt-[4vh]"
 						>
 							<AnimatedText>Let's continue!</AnimatedText>
 						</motion.h1>
@@ -218,7 +233,7 @@ export default function Page1() {
 					{step == TOTAL_STEPS - TOTAL_STEPS && (
 						<motion.a
 							variants={line}
-							href="/sizes"
+							href="/story"
 							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
 						>
 							{"<-"}
