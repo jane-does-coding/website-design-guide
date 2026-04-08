@@ -199,6 +199,17 @@ export default function Page1() {
 				)}
 
 				<div className="flex items-center justify-between w-full mt-[3vh]">
+					{/* BACK PAGE */}
+					{step == TOTAL_STEPS - TOTAL_STEPS && (
+						<motion.a
+							variants={line}
+							href="/sizes"
+							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
+						>
+							{"<-"}
+						</motion.a>
+					)}
+
 					{/* BACK */}
 					{step > 0 ? (
 						<motion.button
@@ -227,7 +238,7 @@ export default function Page1() {
 					{step == TOTAL_STEPS - 1 && (
 						<motion.a
 							variants={line}
-							href="/colors"
+							href="/fonts"
 							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
 						>
 							{"->"}
