@@ -80,7 +80,7 @@ export default function Page1() {
 							<AnimatedText>This is our Design Guide so far</AnimatedText>
 						</motion.h1>
 
-						<div className="border-2 border-dashed w-full py-[3vh] pt-[2vh] my-[2vh] h-[50vh] overflow-y-scroll">
+						<div className="border-2 border-dashed w-full py-[3vh] pt-[2vh] my-[2vh] h-[50vh] overflow-y-scroll bg-white">
 							<h1 className="hand-coffe text-[4vh] text-center px-[3.5vh]">
 								Design Guide
 							</h1>

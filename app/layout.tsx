@@ -29,18 +29,18 @@ export default function RootLayout({
 		>
 			<body className="min-h-full flex flex-col bg-amber-50">
 				{/* corners */}
-				<p className="text-[3vh] absolute top-[2vh] left-[2vw] hand-coffe">
+				<p className="text-[3vh] absolute z-99 top-[2vh] left-[2vw] hand-coffe">
 					2026
 				</p>
 
 				<a
 					href="/all-nav"
-					className="text-[3vh] absolute top-[2vh] right-[2vw] hand-coffe"
+					className="text-[3vh] absolute z-99 top-[2vh] right-[2vw] hand-coffe"
 				>
 					All Nav
 				</a>
 
-				<p className="text-[3vh] absolute bottom-[2vh] right-[2vw] hand-coffe">
+				<p className="text-[3vh] absolute z-99 bottom-[2vh] right-[2vw] hand-coffe">
 					by Jane
 				</p>
 				{children}

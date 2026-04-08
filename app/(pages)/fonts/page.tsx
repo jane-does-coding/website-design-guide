@@ -12,7 +12,7 @@ const container = {
 	},
 };
 
-const TOTAL_STEPS = 3;
+const TOTAL_STEPS = 5;
 
 const line = {
 	hidden: { opacity: 0, y: 25 },
@@ -174,10 +174,22 @@ export default function Page1() {
 							variants={line}
 							className="hand-coffe text-[3vh] w-[80%] text-left mt-[4vh]"
 						>
-							<AnimatedText>
-								You can find custom fonts on websites like Google Fonts, Font
-								Space, 1001 Fonts, etc.
-							</AnimatedText>
+							<p>
+								You can find custom fonts on websites like{" "}
+								<a href="https://fonts.google.com/" className="text-blue-800">
+									{" "}
+									Google Fonts
+								</a>
+								<a href="https://www.fontspace.com/" className="text-blue-800">
+									, Font Space
+								</a>
+								<a
+									href="https://www.1001freefonts.com/"
+									className="text-blue-800"
+								>
+									, 1001 Fonts, etc.
+								</a>
+							</p>
 						</motion.h1>
 
 						<motion.h1
@@ -191,9 +203,71 @@ export default function Page1() {
 							variants={line}
 							className="hand-coffe text-[4vh] w-full text-right mt-[1vh]"
 						>
+							Using websites like{" "}
+							<a
+								href="https://www.calligraphr.com/en/"
+								className="text-blue-800"
+							>
+								calligraphr.com/en/
+							</a>
+						</motion.h1>
+					</div>
+				)}
+
+				{/* PAGE 4 */}
+				{step === 3 && (
+					<div className="w-[45vw] relative">
+						<motion.h1
+							variants={line}
+							className="hand-coffe text-[5vh] w-full text-center "
+						>
 							<AnimatedText>
-								Using websites like calligraphr.com/en/
+								You have full power over how crazy your font can get!
 							</AnimatedText>
+							<div className="flex items-center justify-between my-[2vh]">
+								<img
+									src="/imgs/font-template.png"
+									className="w-[20vw] border-2 border-dashed rounded-[0.5vh]"
+									alt=""
+								/>
+								<p className="text-[3vh] text-right w-[40%] leading-[5vh] ml-auto">
+									<AnimatedText>
+										If you'd like to create a font, it's this template that you
+										would be using. It is really that simple, you should try for
+										yourself!
+									</AnimatedText>
+								</p>
+							</div>
+						</motion.h1>
+					</div>
+				)}
+
+				{/* PAGE 5 */}
+				{step === 4 && (
+					<div className="w-[45vw] relative">
+						<motion.h1
+							variants={line}
+							className="hand-coffe text-[5vh] w-full text-left pr-[5vw]"
+						>
+							<AnimatedText>
+								You need 1-2 fonts for your website, but no more than 2!
+							</AnimatedText>
+							<div className="flex flex-col items-center justify-center my-[2vh]">
+								<p className="text-[4vh] text-right w-full leading-[5vh] ml-auto">
+									<AnimatedText>One for headings</AnimatedText>
+								</p>
+								<p className="text-[4vh] text-right w-full leading-[5vh] ml-auto">
+									<AnimatedText>Which can be as wild as you want</AnimatedText>
+								</p>
+								<p className="text-[4vh] text-left w-full mt-[3vh] leading-[5vh] mr-auto">
+									<AnimatedText>And one for body text</AnimatedText>
+								</p>
+								<p className="text-[4vh] text-left w-full mt-[1vh] leading-[5vh] mr-auto">
+									<AnimatedText>
+										Which must be more simple and readable
+									</AnimatedText>
+								</p>
+							</div>
 						</motion.h1>
 					</div>
 				)}
@@ -238,7 +312,7 @@ export default function Page1() {
 					{step == TOTAL_STEPS - 1 && (
 						<motion.a
 							variants={line}
-							href="/page2"
+							href="/story"
 							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
 						>
 							{"->"}

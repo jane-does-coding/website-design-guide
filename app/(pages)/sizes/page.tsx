@@ -137,28 +137,22 @@ export default function Page1() {
 
 				{/* PAGE 3 */}
 				{step === 2 && (
-					<div className="w-[50vw] relative border-2 border-dashed py-[3vh] pt-[1vh] px-[3vw]">
+					<div className="w-[70vw] relative border-2 border-dashed py-[3vh] pt-[1vh] px-[3vw]">
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[5vh] w-full text-center"
+							className="hand-coffe text-[5vh] mx-auto text-center w-[70%] py-[1vh]"
 						>
 							<AnimatedText>
 								Padding sizes and spacing create the whole vibe of the page.
 							</AnimatedText>
 						</motion.h1>
 
-						<div className="grid grid-cols-2 gap-[3vh] mt-[2vh]">
+						<div className="flex gap-[3vh] mt-[2vh]">
 							<div className="w-full border-2 bg-white border-dashed">
 								<h2 className="hand-coffe text-[2.5vh] text-left tracking-[-1px] leading-[2.75vh]">
 									No padding just look cluttered and the lack of space makes it
 									hard on the eyes. The letter spacing and the line spacing also
 									plays crusial role by the way...
-								</h2>
-							</div>
-							<div className="w-full border-2 bg-white border-dashed p-[4vh]">
-								<h2 className="hand-coffe text-[2.45vh] text-left leading-[6vh]">
-									In here there is regular padding. But the line height is
-									larger.
 								</h2>
 							</div>
 							<div className="w-full border-2 bg-white border-dashed p-[3vh]">
