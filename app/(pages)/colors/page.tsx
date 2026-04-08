@@ -343,15 +343,24 @@ export default function Colors() {
 								<p className="text-[2.5vh] hand-coffe">- Primary</p>
 								<p className="text-[2.5vh] hand-coffe">- Accent & Details</p>
 								<p className="text-[2.5vh] hand-coffe">- Background</p>
-								<p className="text-[2.5vh] hand-coffe">
-									- Text, Borders, Details
-								</p>
+								<p className="text-[2.5vh] hand-coffe">- Text, Borders</p>
 							</div>
 						</div>
 					</div>
 				)}
 
-				<div className="flex items-center justify-between w-full mt-[5vh]">
+				<div className="flex items-center justify-between w-full mt-[3vh]">
+					{/* NEXT PAGE */}
+					{step == TOTAL_STEPS - TOTAL_STEPS && (
+						<motion.a
+							variants={line}
+							href="/page1"
+							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
+						>
+							{"<-"}
+						</motion.a>
+					)}
+
 					{/* BACK */}
 					{step > 0 ? (
 						<motion.button
@@ -380,7 +389,7 @@ export default function Colors() {
 					{step == TOTAL_STEPS - 1 && (
 						<motion.a
 							variants={line}
-							href="/page2"
+							href="/sizes"
 							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
 						>
 							{"->"}

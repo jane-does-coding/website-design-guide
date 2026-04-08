@@ -28,6 +28,8 @@ const wordContainer = {
 	},
 };
 
+const TOTAL_STEPS = 2;
+
 const word = {
 	hidden: { opacity: 0, y: 10 },
 	show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
@@ -151,24 +153,65 @@ export default function Page1() {
 						>
 							<AnimatedText>And build something fun.</AnimatedText>
 						</motion.h1>
-						<a
+						{/* <a
 							href="/colors"
 							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white ml-auto"
 						>
 							{"->"}
-						</a>
+						</a> */}
 					</div>
 				)}
 
-				{step < 1 && (
-					<motion.button
-						variants={line}
-						onClick={() => setStep((s) => s + 1)}
-						className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white mt-[3vh] ml-auto"
-					>
-						{"->"}
-					</motion.button>
-				)}
+				<div className="flex items-center justify-between w-full mt-[5vh]">
+					{/* BACK */}
+					{step > 0 ? (
+						<motion.button
+							variants={line}
+							onClick={() => setStep((s) => Math.max(0, s - 1))}
+							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
+						>
+							{"<-"}
+						</motion.button>
+					) : (
+						<div />
+					)}
+
+					{/* NEXT */}
+					{step < TOTAL_STEPS - 1 && (
+						<motion.button
+							variants={line}
+							onClick={() => setStep((s) => s + 1)}
+							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
+						>
+							{"->"}
+						</motion.button>
+					)}
+
+					{/* NEXT PAGE */}
+					{step == TOTAL_STEPS - 1 && (
+						<motion.a
+							variants={line}
+							href="/colors"
+							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
+						>
+							{"->"}
+						</motion.a>
+					)}
+				</div>
+
+				<motion.div
+					variants={line}
+					className="flex gap-[1vw] justify-center mt-[3vh]"
+				>
+					{Array.from({ length: TOTAL_STEPS }).map((_, i) => (
+						<button
+							key={i}
+							onClick={() => setStep(i)}
+							className={`w-[1.2vh] h-[1.2vh] rounded-full border border-dashed transition-all translate-y-[-6vh]
+			${step === i ? "bg-neutral-800 scale-125" : "bg-transparent"}`}
+						/>
+					))}
+				</motion.div>
 			</motion.div>
 		</div>
 	);

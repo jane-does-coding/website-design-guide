@@ -28,6 +28,8 @@ const wordContainer = {
 	},
 };
 
+const TOTAL_STEPS = 2;
+
 const word = {
 	hidden: { opacity: 0, y: 10 },
 	show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
@@ -63,85 +65,189 @@ export default function Page1() {
 			>
 				{/* PAGE 1 */}
 				{step === 0 && (
-					<>
+					<div className="w-[50vw]">
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[4vh] font-extralight"
+							className="hand-coffe text-[5vh] font-extralight"
 						>
-							<AnimatedText>So we got the colors figured out!</AnimatedText>
+							<AnimatedText>We've now covered colors and sizes</AnimatedText>
 						</motion.h1>
 
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[2.5vh] font-extralight italic ml-auto mt-[2vh]"
+							className="hand-coffe text-[5vh] font-extralight mr-auto text-left"
 						>
-							<AnimatedText>What next?</AnimatedText>
+							<AnimatedText>This is our Design Guide so far</AnimatedText>
 						</motion.h1>
 
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[12vh] scale-x-150 mt-[2vh] text-center"
-						>
-							<AnimatedText>THE SIZES</AnimatedText>
-						</motion.h1>
-
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[5vh] text-center mt-[2vh]"
-						>
-							<AnimatedText>Why are they so important?</AnimatedText>
-						</motion.h1>
-					</>
-				)}
-
-				{/* PAGE 2 */}
-				{step === 1 && (
-					<div className="w-[50vw] relative">
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[5vh] w-[80%] text-center "
-						>
-							<AnimatedText>
-								Your website should have 1-3 different text sizes, no more
-								(usually).
-							</AnimatedText>
-						</motion.h1>
-						<div className="absolute top-0 right-0 flex flex-col h-full  w-[20%] items-center justify-evenly border-l-2 border-dashed">
-							<p className="text-[4vh] hand-coffe h-[66%]">5vh</p>
-							<p className="text-[4vh] hand-coffe h-[17%]">2.5vh</p>
-							<p className="text-[4vh] hand-coffe h-[17%]">4vh</p>
+						<div className="border-2 border-dashed w-full py-[3vh] pt-[2vh] my-[2vh] h-[50vh] overflow-y-scroll">
+							<h1 className="hand-coffe text-[4vh] text-center px-[3.5vh]">
+								Design Guide
+							</h1>
+							<h2 className="hand-coffe text-[3vh] text-left px-[3.5vh] pt-[1.5vh] border-t-2 border-dashed mt-[1.5vh]">
+								Color Pallete
+							</h2>
+							<div className="grid grid-cols-2 gap-[1vh] mt-[1vh] px-[3.5vh]">
+								<div className="bg-[#282934] h-[4vh] w-full border border-dashed flex items-center justify-center rounded-[0.5vh]">
+									<p className="text-white hand-coffe text-left text-[2.5vh]">
+										#282934
+									</p>
+								</div>
+								<p className="text-[2.25vh] hand-coffe">
+									Neutral Dark - with shade of main color
+								</p>
+								<div className="bg-[#2B4162] h-[4vh] w-full border border-dashed flex items-center justify-center rounded-[0.5vh]">
+									<p className="text-white hand-coffe text-left text-[2.5vh]">
+										#2B4162
+									</p>
+								</div>
+								<p className="text-[2.25vh] hand-coffe">Primary Color</p>
+								<div className="bg-[#68d8f4] h-[4vh] w-full border border-dashed flex items-center justify-center rounded-[0.5vh]">
+									<p className="text-black hand-coffe text-left text-[2.5vh]">
+										#68d8f4
+									</p>
+								</div>
+								<p className="text-[2.25vh] hand-coffe">
+									Secondary - shade of the primary
+								</p>
+								<div className="bg-[#ffc26d] h-[4vh] w-full border border-dashed flex items-center justify-center rounded-[0.5vh]">
+									<p className="text-black hand-coffe text-left text-[2.5vh]">
+										#ffc26d
+									</p>
+								</div>
+								<p className="text-[2.25vh] hand-coffe">
+									Action - opposite of the primary
+								</p>
+								<div className="bg-[#f8fafc] h-[4vh] w-full border border-dashed flex items-center justify-center rounded-[0.5vh]">
+									<p className="text-black hand-coffe text-left text-[2.5vh]">
+										#f8fafc
+									</p>
+								</div>
+								<p className="text-[2.25vh] hand-coffe">
+									Neutral Light - with shade of main color
+								</p>
+							</div>
+							<h2 className="hand-coffe text-[3vh] text-left mt-[3vh] px-[3.5vh] pt-[1.5vh] border-t-2 border-dashed">
+								Text Sizes
+							</h2>
+							<div className="flex items-center justify-between w-fit gap-[3vw] mt-[1vh] px-[3.5vh]">
+								<p className="text-[4vh] hand-coffe text-left w-[25vw]">
+									The Main Heading Size
+								</p>
+								<p className="hand-coffe text-[3vh]">4vh</p>
+							</div>
+							<div className="flex items-center justify-between w-fit gap-[3vw] px-[3.5vh]">
+								<p className="text-[3.25vh] hand-coffe text-left w-[25vw]">
+									Sub Heading
+								</p>
+								<p className="hand-coffe text-[3vh]">3.25vh</p>
+							</div>
+							<div className="flex items-center justify-between w-fit gap-[3vw] px-[3.5vh]">
+								<p className="text-[2.5vh] hand-coffe text-left w-[25vw]">
+									Body Text
+								</p>
+								<p className="hand-coffe text-[3vh]">2.5vh</p>
+							</div>
 						</div>
 
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[2.5vh] mt-[4vh] w-[80%] text-left"
+							className="hand-coffe text-[3vh] text-right"
 						>
+							<AnimatedText>Make your own guide along the way</AnimatedText>
+						</motion.h1>
+					</div>
+				)}
+
+				{/* PAGE 2 */}
+				{step === 1 && (
+					<div className="w-[45vw]">
+						<motion.h1 variants={line} className="hand-coffe text-[5vh]">
 							<AnimatedText>
-								There is one size for headings, one for sub headings, and body
-								text.
+								You can treat the design guide like a framework for making a
+								website
 							</AnimatedText>
 						</motion.h1>
 
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[4vh] mt-[3vh] w-[80%] text-left"
+							className="hand-coffe text-[5vh] mt-[4vh] text-left"
 						>
-							<AnimatedText>
-								You usually don't need more than 3 sizes?
-							</AnimatedText>
+							<AnimatedText>The right guide</AnimatedText>
 						</motion.h1>
+
+						<motion.h1
+							variants={line}
+							className="hand-coffe text-[5vh] text-left"
+						>
+							<AnimatedText>is half of the job</AnimatedText>
+						</motion.h1>
+
+						<motion.h1
+							variants={line}
+							className="hand-coffe text-[5vh] text-right mb-[3vh]"
+						>
+							<AnimatedText>Let's continue!</AnimatedText>
+						</motion.h1>
+						{/* <a
+							href="/colors"
+							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white ml-auto"
+						>
+							{"->"}
+						</a> */}
 					</div>
 				)}
 
-				{step < 3 && (
-					<motion.button
-						variants={line}
-						onClick={() => setStep((s) => s + 1)}
-						className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white mt-[3vh] ml-auto"
-					>
-						{"->"}
-					</motion.button>
-				)}
+				<div className="flex items-center justify-between w-full mt-[3vh]">
+					{/* BACK */}
+					{step > 0 ? (
+						<motion.button
+							variants={line}
+							onClick={() => setStep((s) => Math.max(0, s - 1))}
+							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
+						>
+							{"<-"}
+						</motion.button>
+					) : (
+						<div />
+					)}
+
+					{/* NEXT */}
+					{step < TOTAL_STEPS - 1 && (
+						<motion.button
+							variants={line}
+							onClick={() => setStep((s) => s + 1)}
+							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
+						>
+							{"->"}
+						</motion.button>
+					)}
+
+					{/* NEXT PAGE */}
+					{step == TOTAL_STEPS - 1 && (
+						<motion.a
+							variants={line}
+							href="/colors"
+							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
+						>
+							{"->"}
+						</motion.a>
+					)}
+				</div>
+
+				<motion.div
+					variants={line}
+					className="flex gap-[1vw] justify-center mt-[3vh]"
+				>
+					{Array.from({ length: TOTAL_STEPS }).map((_, i) => (
+						<button
+							key={i}
+							onClick={() => setStep(i)}
+							className={`w-[1.2vh] h-[1.2vh] rounded-full border border-dashed transition-all translate-y-[-6vh]
+			${step === i ? "bg-neutral-800 scale-125" : "bg-transparent"}`}
+						/>
+					))}
+				</motion.div>
 			</motion.div>
 		</div>
 	);
