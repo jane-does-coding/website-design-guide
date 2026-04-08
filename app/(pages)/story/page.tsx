@@ -28,7 +28,7 @@ const wordContainer = {
 	},
 };
 
-const TOTAL_STEPS = 2;
+const TOTAL_STEPS = 4;
 
 const word = {
 	hidden: { opacity: 0, y: 10 },
@@ -65,104 +65,185 @@ export default function Page1() {
 			>
 				{/* PAGE 1 */}
 				{step === 0 && (
-					<>
+					<div className="w-[50vw]">
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[5vh] font-extralight"
+							className="hand-coffe text-[4vh] font-extralight"
 						>
-							<AnimatedText>First things first...</AnimatedText>
+							<AnimatedText>This one is hard to explain</AnimatedText>
 						</motion.h1>
 
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[5vh] font-extralight italic ml-auto"
+							className="hand-coffe text-[4vh] font-extralight ml-auto"
 						>
 							<AnimatedText>
-								Throw away all you know about modern web dev
+								but your website needs to be built like a story
 							</AnimatedText>
 						</motion.h1>
 
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[5vh] mr-[15vw] mt-[4vh] text-left"
+							className="hand-coffe text-[4vh] font-extralight text-center mt-[5vh] italic"
 						>
-							<AnimatedText>You CAN have</AnimatedText>
+							<AnimatedText>~ Think of it like a book ~</AnimatedText>
 						</motion.h1>
 
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[5vh] mr-[15vw] text-left"
+							className="hand-coffe text-[5vh] mr-[15vw] mt-[5vh] text-left"
 						>
-							<AnimatedText>Custom Fonts</AnimatedText>
+							<AnimatedText>Your site should FLOWWW</AnimatedText>
 						</motion.h1>
 
 						<motion.h1
 							variants={line}
-							className="hand-coffe text-[5vh] mr-[15vw] text-left"
+							className="hand-coffe text-[5vh] mr-[10vw] text-left"
 						>
-							<AnimatedText>Custom Sounds</AnimatedText>
+							<AnimatedText>And there are two ways of doing so</AnimatedText>
 						</motion.h1>
-
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[5vh] mr-[15vw] text-left"
-						>
-							<AnimatedText>Custom Art</AnimatedText>
-						</motion.h1>
-
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[5vh] text-right"
-						>
-							<AnimatedText>Custom Everything!</AnimatedText>
-						</motion.h1>
-					</>
+					</div>
 				)}
 
 				{/* PAGE 2 */}
 				{step === 1 && (
-					<div className="w-[45vw]">
+					<div className="w-[55vw]">
 						<motion.h1 variants={line} className="hand-coffe text-[5vh]">
-							<AnimatedText>Now we will make a design guide</AnimatedText>
+							<AnimatedText>
+								Take a look at those sites from Awwwards
+							</AnimatedText>
 						</motion.h1>
-
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[5vh] ml-auto"
-						>
-							<AnimatedText>using which you can make a website!</AnimatedText>
-						</motion.h1>
-
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[5vh] mt-[4vh] text-left"
-						>
-							<AnimatedText>Follow along</AnimatedText>
-						</motion.h1>
-
+						<div className="grid grid-cols-2 gap-[2vh]">
+							<div className="w-full rounded-[0.5vh] border-2 border-dashed">
+								<img
+									src="/imgs/site1.png"
+									className="w-full h-full object-cover"
+									alt=""
+								/>
+							</div>
+							<div className="w-full rounded-[0.5vh] border-2 border-dashed">
+								<img
+									src="/imgs/site2.png"
+									className="w-full h-full object-cover"
+									alt=""
+								/>
+							</div>
+							<div className="w-full rounded-[0.5vh] border-2 border-dashed">
+								<img
+									src="/imgs/site3.png"
+									className="w-full h-full object-cover"
+									alt=""
+								/>
+							</div>
+							<div className="w-full rounded-[0.5vh] border-2 border-dashed">
+								<img
+									src="/imgs/site4.png"
+									className="w-full h-full object-cover"
+									alt=""
+								/>
+							</div>
+						</div>
 						<motion.h1
 							variants={line}
 							className="hand-coffe text-[5vh] text-left"
 						>
-							<AnimatedText>To make soething awesome</AnimatedText>
+							<AnimatedText>They do have something in common...</AnimatedText>
 						</motion.h1>
-
-						<motion.h1
-							variants={line}
-							className="hand-coffe text-[5vh] text-right mb-[3vh]"
-						>
-							<AnimatedText>And build something fun.</AnimatedText>
-						</motion.h1>
-						{/* <a
-							href="/colors"
-							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white ml-auto"
-						>
-							{"->"}
-						</a> */}
 					</div>
 				)}
 
-				<div className="flex items-center justify-between w-full mt-[5vh]">
+				{/* PAGE 3 */}
+				{step === 2 && (
+					<div className="w-[55vw]">
+						<motion.h1 variants={line} className="hand-coffe text-[5vh]">
+							<AnimatedText>All of them have JUST ONE action</AnimatedText>
+						</motion.h1>
+						<div className="grid grid-cols-2 gap-[2vh]">
+							<div className="w-full rounded-[0.5vh] border-2 border-dashed">
+								<img
+									src="/imgs/site1.png"
+									className="w-full h-full object-cover"
+									alt=""
+								/>
+							</div>
+							<div className="w-full rounded-[0.5vh] border-2 border-dashed">
+								<img
+									src="/imgs/site2.png"
+									className="w-full h-full object-cover"
+									alt=""
+								/>
+							</div>
+							<div className="w-full rounded-[0.5vh] border-2 border-dashed">
+								<img
+									src="/imgs/site3.png"
+									className="w-full h-full object-cover"
+									alt=""
+								/>
+							</div>
+							<div className="w-full rounded-[0.5vh] border-2 border-dashed">
+								<img
+									src="/imgs/site4.png"
+									className="w-full h-full object-cover"
+									alt=""
+								/>
+							</div>
+						</div>
+						<motion.h1
+							variants={line}
+							className="hand-coffe text-left text-[5vh]"
+						>
+							<AnimatedText>
+								One way the user can unfold that story
+							</AnimatedText>
+						</motion.h1>
+					</div>
+				)}
+
+				{/* PAGE 4 */}
+				{step === 3 && (
+					<div className="w-[50vw]">
+						<motion.h1
+							variants={line}
+							className="hand-coffe text-[5vh] w-[80%] ml-auto"
+						>
+							<AnimatedText>
+								Having many actions a user can take is clutter and requires
+								brain power
+							</AnimatedText>
+						</motion.h1>
+						<motion.h1
+							variants={line}
+							className="hand-coffe text-[3.25vh] w-[75%] text-left mt-[5vh] mr-auto"
+						>
+							<AnimatedText>
+								While we are trying to make the user flow through the website
+								like it's a story, and see all of it, rather than having to go
+								through it like a maze to discover the pages.
+							</AnimatedText>
+						</motion.h1>
+						<motion.h1
+							variants={line}
+							className="hand-coffe text-[5vh] w-[60%] text-right mt-[2vh] ml-auto"
+						>
+							<AnimatedText>
+								Make it ONE flow, ONE action on the pages.
+							</AnimatedText>
+						</motion.h1>
+					</div>
+				)}
+
+				<div className="flex items-center justify-between w-full mt-[3vh]">
+					{/* BACK PAGE */}
+					{step == TOTAL_STEPS - TOTAL_STEPS && (
+						<motion.a
+							variants={line}
+							href="/fonts"
+							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
+						>
+							{"<-"}
+						</motion.a>
+					)}
+
 					{/* BACK */}
 					{step > 0 ? (
 						<motion.button
@@ -191,7 +272,7 @@ export default function Page1() {
 					{step == TOTAL_STEPS - 1 && (
 						<motion.a
 							variants={line}
-							href="/colors"
+							href="/page3"
 							className="px-[3vw] py-[0.5vh] hand-coffe text-[2.5vh] border-2 border-dashed cursor-pointer bg-white"
 						>
 							{"->"}
